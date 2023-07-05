@@ -1,14 +1,14 @@
-## Ozone Maintenance server
+## Ozone Maintenance Server
 This is a simple nodejs server that is used to serve the Ozone Maintenance page.
 
 ### How to run
-1. Clone the repo `git clone https://github.com/ozone-his/ozone-maintainance-page`
+1. Clone the repo `git clone https://github.com/ozone-his/ozone-maintenance-page`
 2. Run `npm install`
 3. Export env vars
 ```bash
 export PORT=3000 \
-export TITLE="The system is currently undergoing maintainance" \
-export MESSAGE="We are currently undergoing maintainance. Please check back later." \
+export TITLE="The system is currently undergoing maintenance" \
+export MESSAGE="We are currently undergoing maintenance. Please check back later." \
 export SUPPORT_EMAIL="+00 000 000 0000" \
 export SUPPORT_PHONE="mail@address.com"
 ```

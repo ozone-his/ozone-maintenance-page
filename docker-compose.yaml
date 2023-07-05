@@ -1,0 +1,21 @@
+version: '3'
+services:
+  maintenance:
+    networks:
+      - web
+    build: .
+    ports:
+      - "3000:3000"
+    labels:
+      traefik.enable: true
+      traefik.http.routers.error-router.rule: HostRegexp(`{host:.+}`)
+      traefik.http.routers.error-router.priority: 1
+      traefik.http.routers.error-router.entrypoints: websecure
+      traefik.http.routers.error-router.middlewares: error-pages-middleware
+      traefik.http.middlewares.error-pages-middleware.errors.status: "400-599"
+      traefik.http.middlewares.error-pages-middleware.errors.service: maintenance
+      traefik.http.services.maintenance.loadbalancer.server.port: 3000
+      traefik.http.middlewares.error-pages-middleware.errors.query: /
+networks:
+  web:
+    external: true

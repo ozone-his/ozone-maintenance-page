@@ -6,6 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #ededed;
+  font-family: IBM Plex Sans;
 }
 
 .spacing {
@@ -24,7 +25,6 @@ main {
   text-align: center;
   /* Fixed heading styles/heading-05 */
   font-size: 32px;
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 300;
   line-height: 40px;
@@ -35,7 +35,6 @@ main {
   text-align: center;
   /* Body styles/body-compact-02 */
   font-size: 16px;
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
@@ -84,7 +83,6 @@ main {
   color: var(--text-text-helper, #6f6f6f);
   text-align: center;
   font-size: 12px;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -95,7 +93,6 @@ main {
   text-align: center;
   /* Utility styles/legal-01 */
   font-size: 12px;
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;

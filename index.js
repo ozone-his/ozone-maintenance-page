@@ -2,13 +2,17 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
+const date = require('date-and-time')
+const now  =  new Date();
+app.locals.serverStartTime = date.format(now,'YYYY/MM/DD HH:mm:ss');
 
 app.get('/', (req, res) => {
     res.render('index', {
         title: process.env.TITLE || 'The system is currently undergoing maintainance',
         message: process.env.MESSAGE || 'We are currently undergoing maintainance. Please check back later.',
         supportPhone: process.env.SUPPORT_PHONE || '+00 000 000 0000',
-        supportEmail: process.env.SUPPORT_EMAIL || 'mail@address.com'
+        supportEmail: process.env.SUPPORT_EMAIL || 'mail@address.com',
+        serverStartTime: app.locals.serverStartTime
     });
 });
 

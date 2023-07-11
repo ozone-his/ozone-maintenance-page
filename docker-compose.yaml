@@ -4,6 +4,11 @@ services:
     networks:
       - web
     build: .
+    environment:
+      - MESSAGE=${MESSAGE}
+      - TITLE=${TITLE}
+      - SUPPORT_EMAIL=${SUPPORT_EMAIL}
+      - SUPPORT_PHONE=${SUPPORT_PHONE}
     ports:
       - "3000:3000"
     labels:

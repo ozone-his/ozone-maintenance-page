@@ -8,10 +8,10 @@ app.locals.serverStartTime = date.format(now,'YYYY/MM/DD HH:mm:ss');
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: process.env.TITLE || 'The system is currently undergoing maintainance',
-        message: process.env.MESSAGE || 'We are currently undergoing maintainance. Please check back later.',
-        supportPhone: process.env.SUPPORT_PHONE || '+00 000 000 0000',
-        supportEmail: process.env.SUPPORT_EMAIL || 'mail@address.com',
+        title: process.env.TITLE || 'The system is currently undergoing maintenance',
+        message: process.env.MESSAGE || 'We are currently undergoing maintenance. Please check back later.',
+        supportPhone: process.env.SUPPORT_PHONE || '-',
+        supportEmail: process.env.SUPPORT_EMAIL || 'info@ozone-his.com',
         serverStartTime: app.locals.serverStartTime
     });
 });

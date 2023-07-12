@@ -1,5 +1,5 @@
 {
-  "name": "ozone-maintainance-page",
+  "name": "ozone-maintenance-page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ozone-his/ozone-maintainance-page.git"
+    "url": "git+https://github.com/ozone-his/ozone-maintenance-page.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ozone-his/ozone-maintainance-page/issues"
+    "url": "https://github.com/ozone-his/ozone-maintenance-page/issues"
   },
-  "homepage": "https://github.com/ozone-his/ozone-maintainance-page#readme",
+  "homepage": "https://github.com/ozone-his/ozone-maintenance-page#readme",
   "dependencies": {
     "date-and-time": "^3.0.2",
     "ejs": "^3.1.9",

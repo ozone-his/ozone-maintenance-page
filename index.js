@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.render('index', {
         title: process.env.TITLE || 'The system is currently undergoing maintenance',
         message: process.env.MESSAGE || 'We are currently undergoing maintenance. Please check back later.',
-        supportPhone: process.env.SUPPORT_PHONE || '-',
+        supportPhone: process.env.SUPPORT_PHONE || '- - - - - - - - -',
         supportEmail: process.env.SUPPORT_EMAIL || 'info@ozone-his.com',
         serverStartTime: app.locals.serverStartTime
     });

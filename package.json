@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ozone-his/ozone-maintenance-page/issues"
+    "url": "https://talk.openmrs.org/c/software/ozone-his"
   },
-  "homepage": "https://github.com/ozone-his/ozone-maintenance-page#readme",
+  "homepage": "https://www.ozone-his.com/",
   "dependencies": {
     "date-and-time": "^3.0.2",
     "ejs": "^3.1.9",

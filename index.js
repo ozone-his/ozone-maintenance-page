@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
         message: process.env.MESSAGE || 'We are currently undergoing maintenance. Please check back later.',
         supportPhone: process.env.SUPPORT_PHONE || '- - - - - - - - -',
         supportEmail: process.env.SUPPORT_EMAIL || 'info@ozone-his.com',
+        pageGenerationTimeLabel: process.env.PAGE_GENERATION_LABEL || 'This message was last updated on',
         serverStartTime: app.locals.serverStartTime
     });
 });

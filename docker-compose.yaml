@@ -3,7 +3,7 @@ services:
   maintenance:
     networks:
       - web
-    build: .
+    image: mekomsolutions/ozone-maintenance-page
     environment:
       - MESSAGE=${MESSAGE}
       - TITLE=${TITLE}

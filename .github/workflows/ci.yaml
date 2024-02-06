@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  release:
+    types: [published]
+
+jobs:
+  validate:
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/maven-build-test.yml@main
+    secrets:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+
+  pre-release:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: validate
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/maven-publish.yml@main
+    secrets:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+
+  release:
+    if: ${{ github.event_name == 'release' }}
+    needs: validate
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/maven-publish.yml@main
+    secrets:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+
+  docker-pre-release:
+    needs: pre-release
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/docker-build-publish.yml@main
+    with:
+      image-name: "ozone-maintenance-page"
+    secrets:
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  
+  docker-release:
+    needs: release
+    uses: mekomsolutions/shared-github-workflow/.github/workflows/docker-build-publish.yml@main
+    with:
+      image-name: "ozone-maintenance-page"
+    secrets:
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

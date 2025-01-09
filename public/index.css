@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Geist';
+  src: url(fonts/Geist-1.3.0/statics-woff/Geist-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url(fonts/Recoleta/font.woff2) format('woff2');
+}
+
 body {
   min-height: 100vh;
   box-sizing: border-box;
@@ -5,8 +15,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ededed;
-  font-family: IBM Plex Sans;
+  background: #FCF4E5;
+  font-family: Geist;
 }
 
 .spacing {
@@ -21,17 +31,18 @@ main {
 }
 
 .page-title {
-  color: #000;
+  color: #141324;
   text-align: center;
   /* Fixed heading styles/heading-05 */
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
   line-height: 40px;
+  font-family: Recoleta;
 }
 
 .content {
-  color: #000;
+  color: #141324;
   text-align: center;
   /* Body styles/body-compact-02 */
   font-size: 16px;
@@ -49,7 +60,7 @@ main {
 }
 
 .ozone-logo img {
-  width: 6.25rem;
+  width: 10rem;
 }
 
 .ozone-logo-lg {

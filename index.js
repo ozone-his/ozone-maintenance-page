@@ -6,6 +6,8 @@ const date = require('date-and-time')
 const now  =  new Date();
 app.locals.serverStartTime = date.format(now,'YYYY/MM/DD HH:mm:ss');
 
+app.use('/static', express.static(__dirname + '/public'));
+
 app.get('/', (req, res) => {
     res.render('index', {
         title: process.env.TITLE || 'The system is currently undergoing maintenance',

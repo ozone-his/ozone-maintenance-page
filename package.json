@@ -17,6 +17,7 @@
   },
   "homepage": "https://www.ozone-his.com/",
   "dependencies": {
+    "@fontsource/geist-sans": "^5.1.0",
     "date-and-time": "^3.0.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2"

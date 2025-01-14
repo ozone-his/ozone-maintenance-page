@@ -51,8 +51,7 @@ main {
   line-height: 22px;
 }
 
-.ozone-logo,
-.ozone-logo-lg {
+.ozone-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,16 +60,6 @@ main {
 
 .ozone-logo img {
   width: 10rem;
-}
-
-.ozone-logo-lg {
-  display: none;
-  margin-top: 1rem;
-  padding: 1.5rem 0;
-}
-
-.ozone-logo-lg img {
-  width: 9.375rem;
 }
 
 .contact-info {
@@ -108,14 +97,4 @@ main {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.32px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .ozone-logo,
-  .contact-info {
-    display: none;
-  }
-  .ozone-logo-lg {
-    display: block;
-  }
 }

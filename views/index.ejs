@@ -14,14 +14,18 @@
       <img  src="./ozone_logo.svg" />
     </div>
     <div class="contact-info spacing">
+      <% if (supportPhone.replace(/\D/g, '')) { %>
       <div class="contact-info-item">
         <img width="16" src="./Phone.svg" />
         <span><%=supportPhone%></span>
       </div>
+      <% } %>
+      <% if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(supportEmail)) { %>
       <div class="contact-info-item">
         <img width="16" src="./Email.svg" />
         <span><%=supportEmail%></span>
       </div>
+      <% } %>
     </div>
     <p class="footer"><%=pageGenerationTimeLabel%> <%=serverStartTime%> (UTC)</p>
   </main>
